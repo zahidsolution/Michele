@@ -4,7 +4,1337 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Michele A. Swan | LinkedIn Rebranding Direction</title>
-  <meta name="description" content="A private LinkedIn rebranding and positioning direction prepared for Michele A. Swan." />
+  <meta name="description" content="A private LinkedI<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d3329">
+  <title>Michele A. Swan | Premium LinkedIn Rebranding</title>
+  <meta name="description" content="A private LinkedIn rebranding and positioning direction prepared for Michele A. Swan.">
+
+  <style>
+    :root {
+      --green: #0d3329;
+      --green-dark: #071d17;
+      --green-light: #174d3d;
+      --gold: #c99b3b;
+      --gold-light: #f0c86a;
+      --cream: #f7f3e9;
+      --white: #fffdf8;
+      --muted: #68756e;
+      --line: rgba(13, 51, 41, .13);
+      --radius: 24px;
+      --shadow: 0 20px 60px rgba(13, 51, 41, .09);
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: #13231d;
+      line-height: 1.7;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 5% 10%, rgba(201,155,59,.09), transparent 24%),
+        radial-gradient(circle at 95% 45%, rgba(23,77,61,.07), transparent 28%),
+        var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    ::selection {
+      background: var(--gold-light);
+      color: var(--green-dark);
+    }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--green-light));
+      box-shadow: 0 0 14px rgba(201,155,59,.5);
+    }
+
+    .container {
+      width: min(calc(100% - 44px), var(--max));
+      margin-inline: auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,248,242,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 5px rgba(201,155,59,.12);
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 8px 0;
+      color: #5b6961;
+      font-size: 12px;
+      white-space: nowrap;
+      transition: color .25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 82% 15%, rgba(201,155,59,.2), transparent 27%),
+        radial-gradient(circle at 10% 90%, rgba(36,102,83,.42), transparent 35%),
+        linear-gradient(135deg, #071711, #0d3329 52%, #10241d);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .28;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to right, transparent, black);
+    }
+
+    .hero-orbit {
+      position: absolute;
+      z-index: -1;
+      width: 540px;
+      height: 540px;
+      right: -190px;
+      top: -210px;
+      border: 1px solid rgba(240,200,106,.16);
+      border-radius: 50%;
+      animation: orbit 35s linear infinite;
+      box-shadow:
+        0 0 0 55px rgba(240,200,106,.025),
+        0 0 0 110px rgba(240,200,106,.018);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 65px;
+      align-items: end;
+      padding-block: 105px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3, .serif {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: -.035em;
+      line-height: 1.13;
+      font-weight: 500;
+    }
+
+    h1 {
+      max-width: 800px;
+      font-size: clamp(48px, 6.4vw, 78px);
+      animation: heroEnter .9s cubic-bezier(.2,.75,.2,1) both;
+    }
+
+    h1 em {
+      color: var(--gold-light);
+      font-style: normal;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin-top: 27px;
+      color: #d8e3dc;
+      font-size: 17px;
+      line-height: 1.9;
+      animation: heroEnter .9s .12s cubic-bezier(.2,.75,.2,1) both;
+    }
+
+    .hero-note {
+      padding: 27px;
+      border: 1px solid rgba(240,200,106,.25);
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(12px);
+      animation: heroEnter .9s .2s cubic-bezier(.2,.75,.2,1) both;
+    }
+
+    .hero-note-number {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+
+    .hero-note p {
+      margin-top: 15px;
+      color: #e1e9e4;
+      font-size: 14px;
+    }
+
+    main {
+      padding-bottom: 65px;
+    }
+
+    section {
+      position: relative;
+      padding-block: 94px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 80px;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+      margin-bottom: 43px;
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: var(--green-light);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h2 {
+      font-size: clamp(35px, 4.4vw, 55px);
+    }
+
+    .section-heading > p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 29px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,253,248,.85);
+      box-shadow: 0 10px 35px rgba(13,51,41,.035);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform: scaleX(.3);
+      transform-origin: left;
+      transition: transform .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card-number {
+      color: var(--green-light);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .15em;
+    }
+
+    .card h3 {
+      margin-block: 18px 12px;
+      color: var(--green);
+      font-size: 25px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .comparison-box {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .comparison-box.dark {
+      color: var(--white);
+      background: linear-gradient(145deg, #0b2b22, #123f31);
+      border-color: rgba(240,200,106,.2);
+      box-shadow: 0 24px 55px rgba(13,51,41,.12);
+    }
+
+    .comparison-label {
+      margin-bottom: 20px;
+      color: #887143;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .dark .comparison-label {
+      color: var(--gold-light);
+    }
+
+    .comparison-box > p {
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .comparison-note {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+    }
+
+    .dark .comparison-note {
+      color: #d8e3dc;
+      border-color: rgba(240,200,106,.2);
+    }
+
+    .headline-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .headline {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 20px;
+      align-items: start;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: rgba(255,253,248,.9);
+      transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+
+    .headline:hover {
+      border-color: rgba(201,155,59,.65);
+      transform: translateX(4px);
+      box-shadow: 0 12px 30px rgba(13,51,41,.06);
+    }
+
+    .option {
+      padding-top: 6px;
+      color: var(--green-light);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .headline-text {
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .rationale {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .copy-button {
+      min-width: 83px;
+      padding: 10px 15px;
+      border: 1px solid rgba(13,51,41,.17);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 850;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .copy-button:hover {
+      border-color: var(--gold);
+      box-shadow: 0 6px 20px rgba(201,155,59,.17);
+      transform: translateY(-2px);
+    }
+
+    .copy-button.copied {
+      color: white;
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .current-copy {
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: linear-gradient(135deg, #fffdf8, #f3eee3);
+      color: #58655e;
+      white-space: pre-line;
+      box-shadow: 0 12px 36px rgba(13,51,41,.035);
+    }
+
+    .subtle {
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .about-shell {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      border-radius: 27px;
+      color: white;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(201,155,59,.16), transparent 30%),
+        linear-gradient(145deg, #082219, #103b2e);
+      box-shadow: 0 28px 65px rgba(13,51,41,.15);
+    }
+
+    .about-shell::after {
+      content: "";
+      position: absolute;
+      width: 370px;
+      height: 370px;
+      top: -220px;
+      right: -140px;
+      border: 1px solid rgba(240,200,106,.15);
+      border-radius: 50%;
+      box-shadow: 0 0 0 45px rgba(240,200,106,.025);
+      pointer-events: none;
+    }
+
+    .about-copy {
+      position: relative;
+      z-index: 1;
+      color: #eaf1ec;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    .about-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 25px;
+    }
+
+    .featured-tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      border: 1px solid rgba(13,51,41,.09);
+      border-radius: 999px;
+      color: var(--green-light);
+      background: #e8eee9;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .banner-panel {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 35px;
+      align-items: center;
+      padding: 38px;
+      border-radius: 27px;
+      color: white;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(201,155,59,.17), transparent 30%),
+        linear-gradient(145deg, #082219, #123d2f);
+      box-shadow: 0 28px 65px rgba(13,51,41,.15);
+    }
+
+    .banner-panel h3 {
+      font-size: 40px;
+    }
+
+    .banner-panel p {
+      margin-top: 15px;
+      color: #d8e3dc;
+      font-size: 14px;
+    }
+
+    .banner-mini {
+      padding: 25px;
+      border: 1px solid rgba(240,200,106,.22);
+      border-radius: 19px;
+      background: rgba(255,255,255,.045);
+    }
+
+    .banner-mini strong {
+      display: block;
+      margin-bottom: 13px;
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .banner-mini .serif {
+      font-size: 27px;
+    }
+
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      padding: 35px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: linear-gradient(135deg, #e9f0eb, #f1eadb);
+      box-shadow: 0 16px 45px rgba(13,51,41,.06);
+    }
+
+    .closing h3 {
+      font-size: 34px;
+    }
+
+    .closing p {
+      margin-top: 12px;
+      color: #5e6b63;
+      font-size: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      box-shadow: 0 10px 24px rgba(13,51,41,.15);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(13,51,41,.23);
+    }
+
+    footer {
+      padding-block: 35px 55px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 12px;
+    }
+
+    .sources a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .sources a:hover {
+      color: var(--green);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(23px);
+      filter: blur(3px);
+      transition:
+        opacity .75s cubic-bezier(.2,.75,.2,1),
+        transform .75s cubic-bezier(.2,.75,.2,1),
+        filter .75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    .cards .reveal:nth-child(2) {
+      transition-delay: .08s;
+    }
+
+    .cards .reveal:nth-child(3) {
+      transition-delay: .16s;
+    }
+
+    .headline-list .reveal:nth-child(2) {
+      transition-delay: .04s;
+    }
+
+    .headline-list .reveal:nth-child(3) {
+      transition-delay: .08s;
+    }
+
+    .headline-list .reveal:nth-child(4) {
+      transition-delay: .12s;
+    }
+
+    .headline-list .reveal:nth-child(5) {
+      transition-delay: .16s;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 90;
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--green);
+      background: rgba(255,253,248,.92);
+      box-shadow: 0 12px 30px rgba(13,51,41,.12);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      backdrop-filter: blur(12px);
+      transition: .25s ease;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+
+    .back-top:hover {
+      color: white;
+      background: var(--green);
+    }
+
+    @keyframes heroEnter {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes orbit {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 5px rgba(201,155,59,.12), 0 0 18px rgba(201,155,59,.35);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(201,155,59,.06), 0 0 28px rgba(201,155,59,.5);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-content,
+      .section-heading,
+      .banner-panel,
+      .closing {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        gap: 35px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max));
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+        padding-block: 13px;
+      }
+
+      .nav-links {
+        width: 100%;
+        gap: 17px;
+      }
+
+      .hero-content {
+        padding-block: 72px;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      section {
+        padding-block: 65px;
+      }
+
+      .section-heading h2 {
+        font-size: 37px;
+      }
+
+      .headline {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .copy-button {
+        justify-self: start;
+      }
+
+      .about-shell,
+      .banner-panel,
+      .closing,
+      .comparison-box {
+        padding: 25px;
+      }
+
+      .about-copy {
+        font-size: 17px;
+      }
+
+      .banner-panel h3 {
+        font-size: 33px;
+      }
+
+      .closing h3 {
+        font-size: 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        filter: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <button class="back-top" aria-label="Back to top">↑</button>
+
+  <nav class="nav" aria-label="Section navigation">
+    <div class="container nav-inner">
+      <div class="brand"><span class="brand-dot"></span> Private LinkedIn Rebranding</div>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#positioning">Positioning</a>
+        <a href="#headline">Headline</a>
+        <a href="#about">About</a>
+        <a href="#featured">Featured</a>
+        <a href="#banner">Banner</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-orbit"></div>
+
+    <div class="container hero-content">
+      <div>
+        <div class="eyebrow">Private brand direction · Prepared for Michele A. Swan</div>
+
+        <h1>Your profile can make the story behind your businesses <em>impossible to miss.</em></h1>
+
+        <p class="hero-description">
+          The strongest opportunity is not adding more titles. It is connecting you, Azany Group, and the ventures underneath it around one clear founder position: building businesses that connect people, money and opportunity across borders.
+        </p>
+      </div>
+
+      <aside class="hero-note">
+        <div class="hero-note-number">THE CENTRAL IDEA · 01</div>
+        <p>
+          The public business story is more specific than the current personal profile. Your LinkedIn can carry more of that clarity without becoming a corporate brochure.
+        </p>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">01 / The opportunity</div>
+            <h2>A stronger founder story is already there.</h2>
+          </div>
+          <p>
+            The profile has real range, but the positioning does not yet make that range feel like one coherent point of view.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-number">01</div>
+            <h3>The founder story</h3>
+            <p>
+              The current profile leads with a CEO title and a broad professional summary. The company story gives you a sharper narrative to build from.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-number">02</div>
+            <h3>The portfolio is the proof</h3>
+            <p>
+              Azany Group connects commerce, payments and cross-border financial products. That portfolio can make your profile more memorable than a generic executive description.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-number">03</div>
+            <h3>A point of view</h3>
+            <p>
+              People-first infrastructure, cross-border friction and practical business building can become the foundation of a recognizable founder narrative.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="positioning">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">02 / Positioning shift</div>
+            <h2>From role clarity to narrative clarity.</h2>
+          </div>
+          <p>
+            Your profile should help visitors understand what you build, who it is for, and the idea that ties your ventures together.
+          </p>
+        </div>
+
+        <div class="comparison reveal">
+          <article class="comparison-box">
+            <div class="comparison-label">Today</div>
+            <p>CEO / Founder, Azany Group Holdings LLC</p>
+            <div class="comparison-note">
+              Strong on seniority. Light on the specific value, market context and founder thesis behind the role.
+            </div>
+          </article>
+
+          <article class="comparison-box dark">
+            <div class="comparison-label">Stronger impression</div>
+            <p>Founder building borderless businesses across commerce, payments and opportunity.</p>
+            <div class="comparison-note">
+              Keep the executive authority. Add the story people need to remember.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="headline">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">03 / Headline directions</div>
+            <h2>Five ways to sharpen the first impression.</h2>
+          </div>
+          <p>
+            Each option keeps your founder status visible while making the business context easier to understand. Use the copy buttons to compare your favorites.
+          </p>
+        </div>
+
+        <div class="headline-list">
+          <article class="headline reveal">
+            <div class="option">Option 01</div>
+            <div>
+              <div class="headline-text">Founder, Azany Group | Building Borderless Commerce &amp; Financial Infrastructure Across Africa &amp; the Caribbean</div>
+              <div class="rationale">Best for leading with the broader mission and the markets your portfolio serves.</div>
+            </div>
+            <button class="copy-button" data-copy="Founder, Azany Group | Building Borderless Commerce &amp; Financial Infrastructure Across Africa &amp; the Caribbean">Copy</button>
+          </article>
+
+          <article class="headline reveal">
+            <div class="option">Option 02</div>
+            <div>
+              <div class="headline-text">CEO &amp; Founder, Azany Group | Building Ventures in Commerce, Payments &amp; Global Mobility</div>
+              <div class="rationale">The cleanest executive option. Clear category language without sounding like an advertisement.</div>
+            </div>
+            <button class="copy-button" data-copy="CEO &amp; Founder, Azany Group | Building Ventures in Commerce, Payments &amp; Global Mobility">Copy</button>
+          </article>
+
+          <article class="headline reveal">
+            <div class="option">Option 03</div>
+            <div>
+              <div class="headline-text">Serial Entrepreneur | Building Borderless Businesses for Africa, the Caribbean &amp; Their Diaspora</div>
+              <div class="rationale">Strongest when you want the personal founder identity to lead the profile.</div>
+            </div>
+            <button class="copy-button" data-copy="Serial Entrepreneur | Building Borderless Businesses for Africa, the Caribbean &amp; Their Diaspora">Copy</button>
+          </article>
+
+          <article class="headline reveal">
+            <div class="option">Option 04</div>
+            <div>
+              <div class="headline-text">Founder, Azany Group | Creating Businesses That Move People, Money &amp; Opportunity Across Borders</div>
+              <div class="rationale">The most distinctive option. It turns the portfolio into one memorable founder promise.</div>
+            </div>
+            <button class="copy-button" data-copy="Founder, Azany Group | Creating Businesses That Move People, Money &amp; Opportunity Across Borders">Copy</button>
+          </article>
+
+          <article class="headline reveal">
+            <div class="option">Option 05</div>
+            <div>
+              <div class="headline-text">CEO &amp; Founder | Commerce, Fintech &amp; Cross-Border Ventures | Building for Africa + the Caribbean</div>
+              <div class="rationale">Direct and keyword-rich while remaining broad enough for a holding-company founder.</div>
+            </div>
+            <button class="copy-button" data-copy="CEO &amp; Founder | Commerce, Fintech &amp; Cross-Border Ventures | Building for Africa + the Caribbean">Copy</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">04 / Current About</div>
+            <h2>The current copy leaves too much on the table.</h2>
+          </div>
+          <p>
+            It communicates ambition and breadth, but it does not give a visitor a concrete reason to remember what you build or the markets you operate in.
+          </p>
+        </div>
+
+        <div class="current-copy reveal">As a creative and passionate professional, I am constantly seeking out new challenges and opportunities to innovate. With a diverse skill set and a passion for bringing unique ideas to life, I have experience in fields ranging from law, Medical &amp; Business. Through my work, I strive to inspire and engage others while pushing the boundaries of what is possible.</div>
+
+        <p class="subtle reveal">
+          The biggest upgrade is specificity: replace broad self-description with a concise founder thesis, the portfolio, the problem space, and a natural invitation to connect.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">05 / New About</div>
+            <h2>A founder story built to be remembered.</h2>
+          </div>
+          <p>
+            This version makes your range feel intentional, connects the ventures to one idea, and keeps the tone executive rather than sales-heavy.
+          </p>
+        </div>
+
+        <div class="about-shell reveal">
+          <p class="about-copy" id="aboutCopy">I’m Michele A. Swan, CEO and Founder of Azany Group, where I build ventures around one simple idea: access should not be limited by borders.
+
+My work spans commerce, payments and digital financial tools, with a focus on the people and businesses navigating life across Africa, the Caribbean and the diaspora.
+
+Through ventures including Azany, Africa Vision Card and My Island Visa, I’m focused on making it easier to buy, sell, move and manage money across markets.
+
+I’m most interested in building practical infrastructure around real needs, not creating products for the sake of products. I bring together leadership, business building and a bias toward turning ideas into operating companies.
+
+I also share lessons from building across markets, creating new ventures and solving the friction that appears when people, money and opportunity move across borders.
+
+For partnerships, strategic conversations or opportunities to build together, message me here.</p>
+
+          <div class="about-actions">
+            <button class="copy-button" data-copy-target="aboutCopy">Copy About</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">06 / Featured opportunity</div>
+            <h2>Surface the proof you already have.</h2>
+          </div>
+          <p>
+            The opportunity is not to fill the section. It is to make the portfolio legible in three clicks.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="featured-tag">01 / Flagship</span>
+            <h3>Africa Vision Card</h3>
+            <p>
+              Feature the product itself. Pair a strong visual with one sentence explaining the cross-border problem it solves and link directly to the product experience.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="featured-tag">02 / New market</span>
+            <h3>My Island Visa</h3>
+            <p>
+              Use this to show the Caribbean side of the portfolio and reinforce your broader borderless-business narrative.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="featured-tag">03 / Group</span>
+            <h3>Azany Group story</h3>
+            <p>
+              Surface the company story or strongest founder-led post that explains why the different ventures sit under one group.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="banner">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">07 / Visual identity</div>
+            <h2>Let the banner carry the first impression.</h2>
+          </div>
+          <p>
+            The banner should clarify your position, not simply repeat the headline. It brings the founder story and the visual identity together.
+          </p>
+        </div>
+
+        <div class="banner-panel reveal">
+          <div>
+            <div class="comparison-label" style="color:var(--gold-light)">New visual direction</div>
+            <h3>BUILDING BUSINESSES WITHOUT BORDERS</h3>
+            <p>
+              Commerce. Payments. Opportunity. A global business narrative designed to communicate cross-border movement and infrastructure while keeping the main copy readable around LinkedIn’s profile-photo crop.
+            </p>
+          </div>
+
+          <div class="banner-mini">
+            <strong>Two visual directions</strong>
+            <div class="serif">Dark &amp; light variations</div>
+            <p>
+              Choose the direction that best fits your existing brand identity. The colors and details can be refined around your preferences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="closing reveal">
+          <div>
+            <div class="kicker">08 / The new impression</div>
+            <h3>From “I lead a company” to “I build the kind of companies I want the market to have.”</h3>
+            <p>
+              The goal is a more memorable founder identity without forcing the profile into a narrow single-product category.
+            </p>
+          </div>
+
+          <a class="pill" href="https://www.linkedin.com/in/michele-a-swan-60a377b2/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Public references used for the positioning recommendations.</p>
+      <div class="sources">
+        <a href="https://www.linkedin.com/in/michele-a-swan-60a377b2/" target="_blank" rel="noopener noreferrer">Michele A. Swan on LinkedIn</a>
+        <a href="https://www.linkedin.com/company/azany-group" target="_blank" rel="noopener noreferrer">Azany Group on LinkedIn</a>
+        <a href="https://africavisioncard.com/" target="_blank" rel="noopener noreferrer">Africa Vision Card</a>
+        <a href="https://myislandvisa.com/" target="_blank" rel="noopener noreferrer">My Island Visa</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const progress = document.querySelector(".progress span");
+      const backTop = document.querySelector(".back-top");
+      const navLinks = [...document.querySelectorAll(".nav-links a")];
+
+      function updatePageChrome() {
+        const root = document.documentElement;
+        const maxScroll = root.scrollHeight - window.innerHeight;
+        const percentage = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+
+        progress.style.width = percentage + "%";
+        backTop.classList.toggle("show", window.scrollY > 650);
+      }
+
+      window.addEventListener("scroll", updatePageChrome, { passive: true });
+      updatePageChrome();
+
+      backTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      const revealElements = [...document.querySelectorAll(".reveal")];
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              currentObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(element => observer.observe(element));
+      } else {
+        revealElements.forEach(element => element.classList.add("visible"));
+      }
+
+      const sections = navLinks
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      function updateActiveNavigation() {
+        let current = "";
+
+        sections.forEach(section => {
+          if (window.scrollY >= section.offsetTop - 150) {
+            current = section.id;
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + current
+          );
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNavigation, { passive: true });
+      updateActiveNavigation();
+
+      async function copyText(text, button) {
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch (error) {
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          textarea.setAttribute("readonly", "");
+          textarea.style.position = "fixed";
+          textarea.style.opacity = "0";
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          textarea.remove();
+        }
+
+        const originalText = button.textContent;
+        button.textContent = "Copied!";
+        button.classList.add("copied");
+
+        window.setTimeout(() => {
+          button.textContent = originalText;
+          button.classList.remove("copied");
+        }, 1400);
+      }
+
+      document.querySelectorAll("[data-copy]").forEach(button => {
+        button.addEventListener("click", () => {
+          copyText(button.dataset.copy, button);
+        });
+      });
+
+      document.querySelectorAll("[data-copy-target]").forEach(button => {
+        button.addEventListener("click", () => {
+          const target = document.getElementById(button.dataset.copyTarget);
+          if (target) copyText(target.innerText, button);
+        });
+      });
+
+      document.querySelectorAll(".card, .headline, .banner-mini").forEach(card => {
+        card.addEventListener("pointermove", event => {
+          const rect = card.getBoundingClientRect();
+          card.style.backgroundImage =
+            `radial-gradient(circle at ${event.clientX - rect.left}px ${event.clientY - rect.top}px, rgba(201,155,59,.075), transparent 180px)`;
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.backgroundImage = "";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>n rebranding and positioning direction prepared for Michele A. Swan." />
   <style>
     :root{
       --ink:#0b1420;
